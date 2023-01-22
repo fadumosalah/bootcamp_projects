@@ -1,0 +1,13 @@
+#include <iostream>
+ 
+int main() {
+ 
+ std::cout << "F F F F F   S S S\n";
+ std::cout << "F          S    S\n";
+ std::cout << "F          S\n";
+ std::cout << "FFF         SSS\n";
+ std::cout << "F.              S \n";
+ std::cout << "F          S    S\n";
+ std::cout << "F            SSS\n";      
+
+}
