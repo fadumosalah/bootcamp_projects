@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main() {
+  
+
+  double pesos, reais, soles;
+  double dollars;
+// pesos rate: 0.00032
+// reais rate : 0.27
+// Soles rate: 0.3
+
+
+
+
+  //prompts
+  std::cout << "Enter number of Columbian Pesos: \n";
+  std::cin >> pesos;
+  std::cout << "Enter number of Brazilian Reais: \n";
+  std::cin >> reais;
+  std::cout << "Enter number of Peruvian Soles: \n";
+  std::cin >> soles;
+
+  dollars = 0.00032 * pesos + 0.27 * reais + 0.3 * soles;
+  
+  std::cout << " Us Dollars = $" << dollars << "\n";
+
+
+  
+}
