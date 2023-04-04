@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.card-header{
+    background-color: #404258;
+    color: white;
+}
+
+.card-footer{
+    background-color: #6B728E;
+    color: white;
+}
+a{
+    color: black;
+}
+
+.card{
+    border: black 1px solid;
+
+}
