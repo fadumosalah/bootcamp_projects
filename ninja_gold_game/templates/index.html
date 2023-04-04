@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Ninja Game</title>
+</head>
+<body>
+    <h5 class="alert" role="alert">Your Gold: {{session['goal']}}</h5>
+    <div class="card-group">
+        <div class="card">
+            <h3>Farm</h3>
+            <p>(earns 10-20 golds)</p>
+            <form method="post" action="/process_money">
+                <input type="hidden" name="gold" value="farm">
+                <input class="btn" type="submit" value="Find Gold">
+            </form>
+        </div>
+        <div class="card">
+            <h3>Cave</h3>
+            <p>(earns 5-10 golds)</p>
+            <form method="post" action="process_money">
+                <input type="hidden" name="gold" value="cave">
+                <input class="btn" type="submit" value="Find Gold">
+            </form>
+        </div>
+        <div class="card">
+            <h3>House</h3>
+            <p>(earns 2-5 golds)</p>
+            <form method="post" action="/process_money">
+                <input type="hidden" name="gold" value="house">
+                <input class="btn" type="submit" value="Find Gold">
+            </form>
+        </div>
+        <div class="card">
+            <h3>Casino</h3>
+            <p>(earns/takes 0-50 golds)</p>
+            <form method="post" action="/process_money">
+                <input type="hidden" name="gold" value="casino">
+                <input class="btn" type="submit" value="Find Gold">
+            </form>
+        </div>
+    </div>
+    <a class="btn btn-warning" href='/destroy_session'>Reset</a>
+</body>
+</html>

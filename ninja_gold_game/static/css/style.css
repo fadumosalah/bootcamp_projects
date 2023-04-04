@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0 auto;
+    background-color: #F0EBCE;
+    font-family: 'Silkscreen', cursive;
+
+}
+.alert{
+    background-color: #395144 ;
+}
+.card{
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    background-color: #4E6C50;
+    color:#F0EBCE;
+}
+.btn{
+    background-color: #AA8B56;
+    color: #F0EBCE ;
+}
+
+a {
+    margin: 10px;
+}
