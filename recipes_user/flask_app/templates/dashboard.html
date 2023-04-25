@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active" href="/logout">Logout</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/newrecipe">Add Recipe</a>
+        </li>
+    </ul>
+    <h4 style="padding-left: 5px;"> Welcome {{user.first_name}}!</h4>
+    <Table class="table table-hover" style="margin-top: 20px;">
+        <thead class="thead-light">
+            <th>Name</th>
+            <th>Description</th>
+            <th>Instructions</th>
+            <th>Date Cooked</th>
+            <th>Under 30 minutes?</th>
+            <th>Actions:</th>
+        </thead>
+        <tbody>
+            {% for recipe in all %}
+            <tr>
+                <td>{{recipe.name}}</td>
+                <td>{{recipe.description}}</td>
+                <td>{{recipe.instructions}}</td>
+                <td>{{recipe.date_cooked}}</td>
+                <td style="text-align: center;">{{recipe.minutes}}</td>
+                <td>
+                    <a href="/showrecipe/{{recipe.id}}">Show </a>
+                    {% if session['user_id'] == recipe.user_id %}
+                    <a href="/editrecipe/{{recipe.id}}">| Edit | </a>
+                    <a href="/deleterecipe/{{recipe.id}}">Delete</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </Table>
+</body>
+</html>
