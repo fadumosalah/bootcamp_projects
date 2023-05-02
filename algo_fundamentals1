@@ -1,0 +1,47 @@
+// Multiple of 3
+for (var num = -300; num <0; num++)
+{
+  if (num == -3)
+  {
+    continue; 
+  }
+  
+  else if (num == -6)
+  {
+    continue; 
+  }
+  
+  else if (num%3 == 0)
+  {
+    console.log(num)
+  }
+  
+}
+
+// Printing Integers with WHILE
+var num = 2000
+
+while (num <= 5280)
+{
+  console.log(num)
+  num++
+}
+
+//  Counting, the Dojo Way
+for (var num = 1; num <= 100; num++)
+{
+  if (num%5 == 0)
+  {
+    console.log("Coding")
+  }
+  if (num % 10 == 0)
+  {
+    console.log("Dojo")
+  }
+  else
+  {
+    console.log(num)
+  }
+}
+
+// Flexible Countdown
