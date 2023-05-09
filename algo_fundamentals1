@@ -45,3 +45,12 @@ for (var num = 1; num <= 100; num++)
 }
 
 // Flexible Countdown
+
+def flexible(lowNum, highNum, mult):
+    countdown=[]
+    for f in range(lowNum, highNum + 1):
+        if f % mult == 0:
+            countdown.append(f)
+            print(countdown)
+
+flexible(2, 9, 3)
