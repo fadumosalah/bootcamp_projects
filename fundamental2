@@ -12,3 +12,18 @@ add(["Fatima", 2, 3 , 4]) // prints "Fatima4"
 // in the case of a string, it just prints the string with the length. 
 
 //Values Greater than Second
+
+// swapping and looping through Arrays
+function swapPairs(arr){
+  for (var i=0; i < arr.length-1; i+=2){
+    var temp = arr[i];
+    console.log(temp)
+    arr[i] = arr[i+1];
+    console.log(arr);
+    arr[i+1] = temp;
+    console.log(arr);
+  }
+  return arr
+}
+
+swapPairs([1,2,3,4]);
