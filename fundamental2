@@ -1,0 +1,14 @@
+// Countdown
+
+// First Plus Length
+
+function add(num){
+  sum = num[0] + num.length
+  console.log(sum);
+  
+}
+add([1 , 2, 3,4]);
+add(["Fatima", 2, 3 , 4]) // prints "Fatima4"
+// in the case of a string, it just prints the string with the length. 
+
+//Values Greater than Second
